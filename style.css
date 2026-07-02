@@ -1,0 +1,271 @@
+/* =========================================
+   PENGATURAN DASAR & VARIABEL WARNA
+   ========================================= */
+:root {
+    --primary-color: #2c3e50; /* Biru gelap keabu-abuan (profesional) */
+    --secondary-color: #34495e;
+    --accent-color: #3498db; /* Biru terang untuk tombol dan aksen */
+    --bg-color: #ffffff;
+    --bg-light: #f8f9fa; /* Abu-abu sangat terang untuk variasi latar belakang */
+    --text-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* Pembungkus utama agar konten berada di tengah dan tidak terlalu lebar */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+/* =========================================
+   NAVIGASI (MENU ATAS)
+   ========================================= */
+nav {
+    background-color: var(--primary-color);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* =========================================
+   JUDUL BAGIAN (SECTION TITLES)
+   ========================================= */
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Garis bawah berwarna biru pada judul */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* =========================================
+   BERANDA (HERO SECTION)
+   ========================================= */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: #fff;
+    padding: 6rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.hero .deskripsi {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* =========================================
+   KARTU (CARDS) UNTUK PENGALAMAN & PROYEK
+   ========================================= */
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+/* Efek sedikit terangkat saat kursor diarahkan ke kartu */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.company {
+    font-weight: bold;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   GRID LAYOUT (KOLOM)
+   ========================================= */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* =========================================
+   KETERAMPILAN (SKILL BOXES)
+   ========================================= */
+.skill-box {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.skill-box h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.skill-box ul {
+    list-style-type: none;
+    color: #555;
+    text-align: center;
+}
+
+.skill-box ul li {
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
+    background-color: var(--bg-light);
+    border-radius: 4px;
+}
+
+/* =========================================
+   FOOTER & TOMBOL KONTAK
+   ========================================= */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 4rem 2rem 2rem;
+}
+
+.contact-links {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9; /* Warna tombol menggelap saat disorot */
+}
+
+.copyright {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #95a5a6;
+}
+
+/* =========================================
+   RESPONSIVITAS (TAMPILAN HP)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Mengubah grid menjadi 1 kolom yang memanjang ke bawah di layar HP */
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Menyembunyikan menu navigasi teks agar layar HP tidak penuh */
+    nav ul {
+        display: none; 
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .container {
+        padding: 3rem 1.5rem;
+    }
+}
