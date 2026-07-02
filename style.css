@@ -2,11 +2,11 @@
    PENGATURAN DASAR & VARIABEL WARNA
    ========================================= */
 :root {
-    --primary-color: #2c3e50; /* Biru gelap keabu-abuan (profesional) */
+    --primary-color: #2c3e50; 
     --secondary-color: #34495e;
-    --accent-color: #3498db; /* Biru terang untuk tombol dan aksen */
+    --accent-color: #3498db; 
     --bg-color: #ffffff;
-    --bg-light: #f8f9fa; /* Abu-abu sangat terang untuk variasi latar belakang */
+    --bg-light: #f8f9fa; 
     --text-color: #333333;
 }
 
@@ -23,7 +23,6 @@ body {
     line-height: 1.7;
 }
 
-/* Pembungkus utama agar konten berada di tengah dan tidak terlalu lebar */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -93,7 +92,6 @@ nav ul li a:hover {
     padding-bottom: 0.5rem;
 }
 
-/* Garis bawah berwarna biru pada judul */
 .section-title::after {
     content: '';
     position: absolute;
@@ -146,7 +144,6 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
 }
 
-/* Efek sedikit terangkat saat kursor diarahkan ke kartu */
 .card:hover {
     transform: translateY(-5px);
 }
@@ -238,7 +235,7 @@ footer {
 }
 
 .btn:hover {
-    background-color: #2980b9; /* Warna tombol menggelap saat disorot */
+    background-color: #2980b9; 
 }
 
 .copyright {
@@ -251,12 +248,10 @@ footer {
    RESPONSIVITAS (TAMPILAN HP)
    ========================================= */
 @media (max-width: 768px) {
-    /* Mengubah grid menjadi 1 kolom yang memanjang ke bawah di layar HP */
     .grid-2, .grid-3 {
         grid-template-columns: 1fr;
     }
     
-    /* Menyembunyikan menu navigasi teks agar layar HP tidak penuh */
     nav ul {
         display: none; 
     }
