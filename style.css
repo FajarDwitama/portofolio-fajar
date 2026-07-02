@@ -8,7 +8,7 @@
     --accent-color:#3498db;
     --bg-color:#ffffff;
     --bg-light:#f5f7fa;
-    --text-color:#333;
+    --text-color:#333333;
     --shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
@@ -40,6 +40,18 @@ body{
     background:var(--bg-light);
 }
 
+section{
+    scroll-margin-top:90px;
+}
+
+strong{
+    color:var(--accent-color);
+}
+
+em{
+    font-style:italic;
+}
+
 /* =========================================
 NAVBAR
 ========================================= */
@@ -62,19 +74,19 @@ nav{
 }
 
 .logo{
-    color:white;
+    color:#fff;
     font-size:1.7rem;
-    font-weight:700;
+    font-weight:bold;
 }
 
 nav ul{
+    list-style:none;
     display:flex;
     gap:28px;
-    list-style:none;
 }
 
 nav a{
-    color:white;
+    color:#fff;
     text-decoration:none;
     font-weight:500;
     transition:.3s;
@@ -90,7 +102,7 @@ HERO
 
 .hero{
     background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));
-    color:white;
+    color:#fff;
     padding:120px 20px;
 }
 
@@ -101,7 +113,7 @@ HERO
 
 .subtitle{
     color:#7ec8ff;
-    font-size:1.25rem;
+    font-size:1.3rem;
     font-weight:bold;
     margin-bottom:25px;
 }
@@ -113,63 +125,57 @@ HERO
     opacity:.95;
 }
 
-.hero strong{
-    color:#7ec8ff;
-}
-
-.hero em{
-    color:#ecf0f1;
-}
-
 /* =========================================
 SECTION TITLE
 ========================================= */
 
 .section-title{
     font-size:2rem;
-    margin-bottom:35px;
     color:var(--primary-color);
+    margin-bottom:35px;
     position:relative;
 }
 
 .section-title::after{
     content:"";
     position:absolute;
-    left:0;
     bottom:-10px;
+    left:0;
     width:70px;
     height:4px;
     background:var(--accent-color);
     border-radius:20px;
 }
-
 /* =========================================
-CARD
+   CARD
 ========================================= */
 
 .card{
-    background:white;
-    border-left:5px solid var(--accent-color);
+    background:#fff;
     padding:30px;
-    margin-bottom:25px;
     border-radius:10px;
+    margin-bottom:25px;
+    border-left:5px solid var(--accent-color);
     box-shadow:var(--shadow);
-    transition:.3s;
+    transition:all .3s ease;
 }
 
 .card:hover{
     transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
 }
 
 .card h3{
     color:var(--primary-color);
     margin-bottom:8px;
+    font-size:1.3rem;
 }
 
 .company{
-    color:#777;
+    color:#7f8c8d;
     font-weight:600;
-    margin-bottom:20px;
+    margin-bottom:18px;
+    font-size:.95rem;
 }
 
 /* =========================================
@@ -186,6 +192,8 @@ DESKRIPSI TUGAS
 
 .deskripsi-tugas ul{
     padding-left:22px;
+    margin-top:10px;
+    color:#555;
 }
 
 .deskripsi-tugas li{
@@ -205,15 +213,15 @@ GRID
 .grid-3{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:25px;
 }
 
 /* =========================================
-SKILL
+SKILL BOX
 ========================================= */
 
 .skill-box{
-    background:white;
+    background:#fff;
     padding:25px;
     border-radius:10px;
     box-shadow:var(--shadow);
@@ -221,45 +229,109 @@ SKILL
 }
 
 .skill-box:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
 }
 
 .skill-box h3{
     text-align:center;
     color:var(--primary-color);
     margin-bottom:20px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--accent-color);
 }
 
 .skill-box ul{
     list-style:none;
+    padding:0;
 }
 
-.skill-box li{
+.skill-box ul li{
     background:var(--bg-light);
+    padding:10px 12px;
     margin-bottom:10px;
-    padding:10px;
     border-radius:6px;
+    transition:.3s;
+    font-size:.95rem;
     text-align:center;
 }
 
+.skill-box ul li:hover{
+    background:var(--accent-color);
+    color:#fff;
+    transform:translateX(4px);
+}
+
 /* =========================================
-BUTTON
+TOOLS
+========================================= */
+
+.tools-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.tools-list li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:var(--bg-light);
+    padding:10px 15px;
+    margin-bottom:10px;
+    border-left:4px solid var(--accent-color);
+    border-radius:8px;
+    transition:.3s;
+    text-align:left;
+}
+
+.tools-list li::before{
+    content:"🛠";
+    font-size:16px;
+}
+
+.tools-list li:hover{
+    background:var(--accent-color);
+    color:#fff;
+    transform:translateX(5px);
+    box-shadow:0 6px 18px rgba(52,152,219,.25);
+}
+
+/* =========================================
+ANIMASI
+========================================= */
+
+.card,
+.skill-box,
+.btn{
+    transition:all .3s ease;
+}
+
+.card:hover h3{
+    color:var(--accent-color);
+}
+
+.skill-box:hover h3{
+    color:var(--accent-color);
+}
+/* =========================================
+   BUTTON
 ========================================= */
 
 .btn{
     display:inline-block;
     padding:14px 28px;
-    border-radius:6px;
     background:var(--accent-color);
-    color:white;
+    color:#fff;
     text-decoration:none;
-    transition:.3s;
+    border-radius:8px;
     font-weight:600;
+    transition:all .3s ease;
 }
 
 .btn:hover{
     background:#2980b9;
-    transform:translateY(-2px);
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(52,152,219,.35);
 }
 
 /* =========================================
@@ -269,9 +341,10 @@ CONTACT
 .contact-links{
     display:flex;
     justify-content:center;
+    align-items:center;
     gap:15px;
-    margin:30px 0;
     flex-wrap:wrap;
+    margin:30px 0;
 }
 
 /* =========================================
@@ -280,22 +353,28 @@ FOOTER
 
 footer{
     background:var(--primary-color);
-    color:white;
+    color:#fff;
     padding:70px 20px 30px;
 }
 
 footer h2{
+    font-size:2rem;
     margin-bottom:10px;
 }
 
 footer p{
-    opacity:.95;
+    opacity:.9;
+}
+
+footer .btn{
+    min-width:150px;
+    text-align:center;
 }
 
 .copyright{
     margin-top:40px;
-    color:#bbb;
     font-size:.9rem;
+    color:#bfc7cf;
 }
 
 /* =========================================
@@ -306,56 +385,146 @@ SCROLLBAR
     width:8px;
 }
 
+::-webkit-scrollbar-track{
+    background:#ecf0f1;
+}
+
 ::-webkit-scrollbar-thumb{
     background:var(--accent-color);
-    border-radius:10px;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#2980b9;
 }
 
 /* =========================================
-RESPONSIVE
+SELECTION
 ========================================= */
 
-@media(max-width:900px){
-
-.grid-2,
-.grid-3{
-    grid-template-columns:1fr;
+::selection{
+    background:var(--accent-color);
+    color:#fff;
 }
 
-.hero h1{
-    font-size:2.3rem;
+/* =========================================
+SMOOTH EFFECT
+========================================= */
+
+html{
+    scroll-behavior:smooth;
 }
 
-.container{
-    padding:60px 20px;
+/* =========================================
+RESPONSIVE TABLET
+========================================= */
+
+@media (max-width:900px){
+
+    .container{
+        padding:60px 20px;
+    }
+
+    .grid-2,
+    .grid-3{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:100px 20px;
+    }
+
+    .hero h1{
+        font-size:2.4rem;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
 }
 
-nav ul{
-    gap:15px;
-}
+/* =========================================
+RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    nav ul{
+        display:none;
+    }
+
+    .nav-container{
+        justify-content:center;
+    }
+
+    .hero{
+        padding:80px 20px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .subtitle{
+        font-size:1rem;
+    }
+
+    .hero .deskripsi{
+        font-size:.95rem;
+    }
+
+    .section-title{
+        font-size:1.6rem;
+    }
+
+    .card{
+        padding:22px;
+    }
+
+    .skill-box{
+        padding:20px;
+    }
+
+    .contact-links{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+        max-width:280px;
+    }
 
 }
 
-@media(max-width:768px){
+/* =========================================
+RESPONSIVE SMALL MOBILE
+========================================= */
 
-nav ul{
-    display:none;
-}
+@media (max-width:480px){
 
-.hero{
-    padding:90px 20px;
-}
+    .hero h1{
+        font-size:1.7rem;
+    }
 
-.hero h1{
-    font-size:2rem;
-}
+    .container{
+        padding:50px 18px;
+    }
 
-.subtitle{
-    font-size:1rem;
-}
+    .section-title{
+        font-size:1.4rem;
+    }
 
-.section-title{
-    font-size:1.7rem;
-}
+    .logo{
+        font-size:1.4rem;
+    }
+
+    .card h3{
+        font-size:1.1rem;
+    }
+
+    .skill-box h3{
+        font-size:1.1rem;
+    }
 
 }
